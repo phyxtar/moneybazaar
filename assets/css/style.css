@@ -192,7 +192,7 @@ nav ul li ul li a {
   #navbar-toggle {
     position: absolute;
     left: 18px;
-    top: 70px;
+    top: 30px;
     cursor: pointer;
     padding: 10px 35px 16px 0px;
   }
