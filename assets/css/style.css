@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bg-color {
+  background-color: #8af4c9;
+}
+button {
+  background-color: #00d07d;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.top-content {
+  font-size: 14px;
+}
+
+/* Style for the search box */
+.search-box {
+  margin-top: 12px;
+  width: 213px;
+  height: 33px;
+  flex-shrink: 0;
+  border-radius: 15px !important;
+  display: flex;
+  align-items: center;
+  background-color: rgba(77, 77, 77, 0.12) !important;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Style for the search icon button */
+.search-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-search {
+  background: none !important;
+  border: none !important;
+}
+
+/* Style for the search icon (assuming you're using Font Awesome) */
+.search-icon i {
+  color: rgba(0, 0, 0, 0.42); /* Add your desired icon color */
+  font-size: 18px; /* Adjust the icon size as needed */
+}
+
+/* Style for the search input field */
+.search-box input[type='text'] {
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1; /* Allow the input field to grow and fill the remaining space */
+  padding: 5px;
+}
+
+header {
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Add a background color if needed */
+  z-index: 1000; /* Set a high z-index to make sure it appears above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for styling */
+}
+
+.navigation {
+  margin-top: 10px;
+  height: 55px;
+  /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
+}
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 55px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* .nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+} */
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  font-size: 14px;
+  text-decoration: none !important;
+  display: block;
+  padding: 0 20px;
+  line-height: 55px;
+  color: black;
+  background: #262626;
+  text-decoration: none;
+}
+nav ul li a {
+  font-weight: 600;
+  background: transparent;
+  color: black;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #00d07d;
+  color: #ffffff;
+}
+.navbar-dropdown li a {
+  background: #00d07d;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' \025BE';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.navbar-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
+}
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  height: 55px;
+  width: 70px;
+}
+@media only screen and (max-width: 800px) {
+  .brand > img {
+    width: 45%;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 55px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    /* background: #262626; */
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .navbar-dropdown {
+    position: static;
+  }
+  @media screen and (min-width: 800px) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+  #navbar-toggle {
+    position: absolute;
+    left: 18px;
+    top: 70px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  #navbar-toggle span,
+  #navbar-toggle span:before,
+  #navbar-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: rgb(29, 29, 29);
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  #navbar-toggle span:before {
+    top: -10px;
+  }
+  #navbar-toggle span:after {
+    bottom: -10px;
+  }
+  #navbar-toggle.active span {
+    background-color: transparent;
+  }
+  #navbar-toggle.active span:before,
+  #navbar-toggle.active span:after {
+    top: 0;
+  }
+  #navbar-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #navbar-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.custom-heading {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 63px; /* 134.043% */
+  letter-spacing: 1.41px;
+}
+
+.custom-pragraph {
+  color: rgb(0 0 0 / 64%);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 39px;
+  letter-spacing: 1.08px;
+}
+.custom-button {
+  padding: 0px 20px 0px 20px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 1.38px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.custom-button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00db84;
+  /* border-radius: 10rem; */
+  z-index: -2;
+}
+.custom-button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #16f99e;
+  transition: all 0.3s;
+  /* border-radius: 10rem; */
+  z-index: -1;
+}
+.custom-button:hover {
+  color: #fff;
+}
+.custom-button:hover:before {
+  width: 100%;
+}
+.section-heading {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 63px; /* 262.5% */
+  letter-spacing: 0.72px;
+}
+.section-pragraph {
+  color: rgb(0 0 0 / 64%);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 216.667% */
+  letter-spacing: 1.08px;
+}
+
+.company-logo > img {
+  margin-right: 40px;
+}
+.section-heading-small {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 63px; /* 262.5% */
+  letter-spacing: 0.72px;
+  position: relative;
+  display: inline-block;
+}
+.section-heading-small::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+  width: 50%; /* Adjust this value to control the length of the underline */
+  border-bottom: 6px solid #f68712; /* You can change the color and style as needed */
+}
+.section-heading-big {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 1.2px;
+}
+.brands-info {
+  background-image: url('../img/World-Map-a.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.world-heading {
+  color: #000;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 2.22px;
+}
+.choose-us {
+  position: relative;
+  display: inline-block;
+}
+.choose-us::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  width: 70%; /* Adjust this value to control the length of the underline */
+  border-bottom: 6px solid #f68712; /* You can change the color and style as needed */
+}
+.icon-text {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px; /* 131.818% */
+  letter-spacing: 0.66px;
+}
+.icon-pra {
+  color: #595959;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.54px;
+}
+.banner-sub-heading {
+  color: #fff;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 156.818% */
+  letter-spacing: 1.32px;
+}
+.banner-heading {
+  color: #d9d9d9;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 262.5% */
+  letter-spacing: 0.72px;
+  position: relative;
+  display: inline-block;
+}
+.banner-heading::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  width: 45%; /* Adjust this value to control the length of the underline */
+  border-bottom: 6px solid #f68712; /* You can change the color and style as needed */
+}
+/* Base styles for your elements */
+.number-head {
+  color: #00d07d;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.32px;
+}
+.number-subhead {
+  color: rgba(0, 0, 0, 0.78);
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.81px;
+}
+.number-count {
+  margin-top: -90px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 12px 25px;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.brands-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.brands-logo img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px; /* Add spacing between images */
+}
+.featured-heading {
+  color: #000;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 136.364% */
+  letter-spacing: 0.99px;
+}
+.featured-subheading {
+  color: rgb(0 0 0 / 64%);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.54px;
+}
+.featured-ul {
+  list-style-type: none; /* Remove default bullet points */
+}
+
+.featured-li {
+  color: #4c4949;
+  margin-top: 30px;
+  position: relative;
+  padding-left: 30px; /* Adjust this value for spacing */
+}
+
+.featured-li::before {
+  content: '\2713'; /* Unicode checkmark character */
+  display: inline-block;
+  width: 20px; /* Adjust the size of the circle */
+  height: 20px; /* Adjust the size of the circle */
+  background-color: #00d07d; /* Circle color */
+  border-radius: 50%; /* Make it a circle */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white; /* Checkmark color */
+  line-height: 20px;
+}
+/* .button-container {
+  text-align: center; /* Optional: Center-align the content within the div */
+
+.custom-button {
+  display: inline-block;
+  margin: 0;
+}
+.footer-heading {
+  font-weight: 500;
+  padding: 13px;
+  width: 50%;
+}
+/* Style for the circle background */
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 40px; /* Adjust the circle size */
+  height: 40px; /* Adjust the circle size */
+  background-color: #00d07d;
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+/* Style for the icons */
+.circle i {
+  color: white;
+}
+.footer-containter {
+  padding-top: 50px;
+}
+.footer-innerheading {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.footer-list ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.footer-list li {
+  padding: 5px;
+}
+.web-copyright {
+  text-align: right;
+}
+
+h5 {
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px; /* Adjust this margin as needed for spacing */
+}
+
+/* Media Query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .brands-logo img {
+    flex: 1;
+    max-width: none;
+  }
+}
+/* Media Query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .number-count {
+    margin-top: -90px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mx-4 {
+    margin: 20px 0;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+  }
+  .footer-heading {
+    width: 100%;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-innerheading {
+    margin-top: 30px;
+  }
+  .web-copyright {
+    text-align: center;
+  }
+}
